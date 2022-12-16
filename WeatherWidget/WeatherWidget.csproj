@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseWindowsForms>True</UseWindowsForms>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\CloseWindow.png" />
+    <None Remove="Images\Error.png" />
+    <None Remove="Images\HideTick.png" />
+    <None Remove="Images\NotificationBell.png" />
+    <None Remove="Images\NotificationOffBell.png" />
+    <None Remove="Images\Ok.png" />
+    <None Remove="Images\ShowTick.png" />
+    <None Remove="Images\Spinner.gif" />
+    <None Remove="Images\Spinner1.png" />
+    <None Remove="Images\Update.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Device">
+      <HintPath>..\..\..\..\Windows\Microsoft.NET\Framework\v4.0.30319\System.Device.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\CloseWindow.png" />
+    <Resource Include="Images\Error.png" />
+    <Resource Include="Images\HideTick.png" />
+    <Resource Include="Images\NotificationBell.png" />
+    <Resource Include="Images\NotificationOffBell.png" />
+    <Resource Include="Images\Ok.png" />
+    <Resource Include="Images\ShowTick.png" />
+    <Resource Include="Images\Spinner1.png" />
+    <Resource Include="Images\Update.png" />
+  </ItemGroup>
+
+</Project>
