@@ -3,8 +3,13 @@ using System.Xml.Serialization;
 public static class ParametersSerializer
 {
     private static string filename = "Parameters.xml";
-    public static string BaseDir = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+    public static string BaseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
+    public static Parameters Reload(this Parameters parameters)
+    {
+        parameters.Serialize();
+        return Deserialize();
+    }
     public static void Serialize(this Parameters parameters)
     {
         XmlSerializer xmlSerializerserializer = new XmlSerializer(typeof(Parameters));
